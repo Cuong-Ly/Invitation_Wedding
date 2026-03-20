@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thiệp Mời Cưới – Văn Cường &amp; Hải Lý</title>
+  <meta name="description" content="Trân trọng kính mời bạn đến dự lễ thành hôn của Văn Cường và Hải Lý" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💍</text></svg>" />
+
+  <!-- Open Graph (share Zalo / Facebook đẹp) -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:title"       content="Thiệp Mời Cưới – Văn Cường &amp; Hải Lý" />
+  <meta property="og:description" content="Trân trọng kính mời bạn đến dự lễ thành hôn của Văn Cường và Hải Lý" />
+  <meta property="og:image"       content="images/cover/couple-main.jpg" />
+  <meta name="twitter:card"       content="summary_large_image" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Great+Vibes&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ██████████████████████████████████████████
+       CURTAIN – Màn kéo Song Hỷ
+  ██████████████████████████████████████████ -->
+  <div id="curtain" role="button" tabindex="0" aria-label="Nhấn để mở thiệp cưới" onclick="openCurtain()">
+    <div class="curtain-inner">
+      <div class="song-hy-wrap">
+        <svg viewBox="0 0 300 280" xmlns="http://www.w3.org/2000/svg" fill="white">
+          <!-- Left 喜 -->
+          <rect x="10"  y="10"  width="120" height="18" rx="4"/>
+          <rect x="20"  y="42"  width="100" height="18" rx="4"/>
+          <rect x="30"  y="60"  width="18"  height="60" rx="4"/>
+          <rect x="92"  y="60"  width="18"  height="60" rx="4"/>
+          <rect x="30"  y="90"  width="80"  height="18" rx="4"/>
+          <rect x="61"  y="10"  width="18"  height="110" rx="4"/>
+          <rect x="20"  y="118" width="100" height="18" rx="4"/>
+          <path d="M70,148 C70,148 30,148 30,175 C30,200 70,218 70,218 C70,218 110,200 110,175 C110,148 70,148 70,148 Z"
+                fill="none" stroke="white" stroke-width="14" stroke-linejoin="round"/>
+          <!-- Right 喜 -->
+          <rect x="170" y="10"  width="120" height="18" rx="4"/>
+          <rect x="180" y="42"  width="100" height="18" rx="4"/>
+          <rect x="190" y="60"  width="18"  height="60" rx="4"/>
+          <rect x="252" y="60"  width="18"  height="60" rx="4"/>
+          <rect x="190" y="90"  width="80"  height="18" rx="4"/>
+          <rect x="221" y="10"  width="18"  height="110" rx="4"/>
+          <rect x="180" y="118" width="100" height="18" rx="4"/>
+          <path d="M230,148 C230,148 190,148 190,175 C190,200 230,218 230,218 C230,218 270,200 270,175 C270,148 230,148 230,148 Z"
+                fill="none" stroke="white" stroke-width="14" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <p class="curtain-title">Thiệp Mời Cưới</p>
+      <p class="curtain-hint">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+        Nhấn để mở thiệp
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+      </p>
+    </div>
+  </div>
+
+  <!-- ██████████████████████████████████████████
+       MAIN PAGE
+  ██████████████████████████████████████████ -->
+  <div id="page">
+
+    <!-- ══════════════════════════════════════
+         1. THIỆP MỜI – Layout dọc (ảnh trên + nội dung dưới)
+    ══════════════════════════════════════ -->
+    <section id="cover" class="hero-section">
+
+      <!-- Phần trên: Ảnh cặp đôi slider (Hỗ trợ lướt tay) -->
+      <div class="hero-photo" id="hero-slider">
+        <div class="hero-slider-track" id="hero-track">
+          <div class="hero-slide"><img src="images/cover/couple-main.jpg" alt="Văn Cường & Hải Lý" class="hero-photo-img" loading="eager" /></div>
+          <div class="hero-slide"><img src="images/gallery/gallery-1.jpg" alt="Văn Cường & Hải Lý" class="hero-photo-img" loading="lazy" /></div>
+          <div class="hero-slide"><img src="images/gallery/gallery-2.jpg" alt="Văn Cường & Hải Lý" class="hero-photo-img" loading="lazy" /></div>
+        </div>
+        <!-- Chỉ báo chấm -->
+        <div class="hero-slider-dots" id="hero-dots"></div>
+        <!-- Gradient mờ dần xuống -->
+        <div class="hero-photo-fade"></div>
+      </div>
+
+      <!-- Phần dưới: Nội dung thiệp -->
+      <div class="hero-card reveal">
+        <!-- Song Hỷ nhỏ -->
+        <div class="hero-songhy">
+          <svg viewBox="0 0 300 280" xmlns="http://www.w3.org/2000/svg" fill="#c8102e" width="70">
+            <rect x="10"  y="10"  width="120" height="18" rx="4"/>
+            <rect x="20"  y="42"  width="100" height="18" rx="4"/>
+            <rect x="30"  y="60"  width="18"  height="60" rx="4"/>
+            <rect x="92"  y="60"  width="18"  height="60" rx="4"/>
+            <rect x="30"  y="90"  width="80"  height="18" rx="4"/>
+            <rect x="61"  y="10"  width="18"  height="110" rx="4"/>
+            <rect x="20"  y="118" width="100" height="18" rx="4"/>
+            <path d="M70,148 C70,148 30,148 30,175 C30,200 70,218 70,218 C70,218 110,200 110,175 C110,148 70,148 70,148 Z" fill="none" stroke="#c8102e" stroke-width="14" stroke-linejoin="round"/>
+            <rect x="170" y="10"  width="120" height="18" rx="4"/>
+            <rect x="180" y="42"  width="100" height="18" rx="4"/>
+            <rect x="190" y="60"  width="18"  height="60" rx="4"/>
+            <rect x="252" y="60"  width="18"  height="60" rx="4"/>
+            <rect x="190" y="90"  width="80"  height="18" rx="4"/>
+            <rect x="221" y="10"  width="18"  height="110" rx="4"/>
+            <rect x="180" y="118" width="100" height="18" rx="4"/>
+            <path d="M230,148 C230,148 190,148 190,175 C190,200 230,218 230,218 C230,218 270,200 270,175 C270,148 230,148 230,148 Z" fill="none" stroke="#c8102e" stroke-width="14" stroke-linejoin="round"/>
+          </svg>
+        </div>
+
+        <p class="hero-invite-label">Trân trọng kính mời</p>
+        <p class="hero-invite-sub">Bạn và Người Thương</p>
+        <div class="gold-line"></div>
+
+        <h1 class="hero-title">Lễ Thành Hôn</h1>
+        <p class="hero-names">Văn Cường <span>&amp;</span> Hải Lý</p>
+        <div class="gold-line"></div>
+
+        <p class="hero-body-text">
+          Lễ thành hôn được tổ chức vào ngày <strong>DD/MM/YYYY</strong><br/>
+          lúc <strong>HH:MM</strong><br/>
+          tại <strong>Tên địa điểm</strong><br/>
+          <em>Địa chỉ nhà hàng / địa điểm</em>
+        </p>
+
+        <div class="hero-ornament">✦ ✦ ✦</div>
+
+        <p class="hero-body-text">
+          Sự hiện diện của quý vị là niềm vinh hạnh lớn lao<br/>
+          và là món quà ý nghĩa nhất đối với chúng tôi.
+        </p>
+
+        <div class="hero-ornament">❦</div>
+
+        <p class="hero-families">
+          <span>Gia đình Nhà Trai</span>
+          <span class="amp-small">&amp;</span>
+          <span>Gia đình Nhà Gái</span>
+        </p>
+
+        <p class="hero-scroll-hint">↓ Cuộn xuống để xem thêm ↓</p>
+      </div>
+
+    </section>
+
+
+    <!-- ══════════════════════════════════════
+         3. CHÚ RỂ
+    ══════════════════════════════════════ -->
+    <section id="groom" class="person-section groom-section">
+      <div class="person-inner reveal">
+        <div class="person-photo-wrap">
+          <div class="person-photo-placeholder">
+            <img
+              src="images/groom/groom.jpg"
+              alt="Chú rể Nguyễn Văn Cường"
+              class="person-photo-img"
+              loading="lazy"
+            />
+          </div>
+          <div class="person-photo-frame"></div>
+        </div>
+        <div class="person-info">
+          <p class="person-role">Chú Rể</p>
+          <h2 class="person-name">Nguyễn Văn Cường</h2>
+          <div class="gold-line gold-line--left"></div>
+          <p class="person-desc">
+            Chàng trai với nụ cười ấm áp và trái tim chân thành.<br/>
+            Người đã chọn Hải Lý làm bạn đồng hành suốt cuộc đời.
+          </p>
+          <div class="person-tags">
+            <span>🎂 DD/MM/YYYY</span>
+            <span>📍 Quê quán</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         4. CÔ DÂU
+    ══════════════════════════════════════ -->
+    <section id="bride" class="person-section bride-section">
+      <div class="person-inner person-inner--reverse reveal">
+        <div class="person-photo-wrap">
+          <div class="person-photo-placeholder">
+            <img
+              src="images/bride/bride.jpg"
+              alt="Cô dâu Mai Hải Lý"
+              class="person-photo-img"
+              loading="lazy"
+            />
+          </div>
+          <div class="person-photo-frame"></div>
+        </div>
+        <div class="person-info">
+          <p class="person-role">Cô Dâu</p>
+          <h2 class="person-name">Mai Hải Lý</h2>
+          <div class="gold-line gold-line--left"></div>
+          <p class="person-desc">
+            Cô gái với đôi mắt sáng và nụ cười rạng rỡ.<br/>
+            Người đã chọn Văn Cường làm điểm tựa của cả cuộc đời.
+          </p>
+          <div class="person-tags">
+            <span>🎂 DD/MM/YYYY</span>
+            <span>📍 Quê quán</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         5. GIA ĐÌNH HAI HỌ
+    ══════════════════════════════════════ -->
+    <section id="families" class="families-section">
+      <div class="section-header reveal">
+        <p class="section-tag">👨‍👩‍👧‍👦 Gia Đình Hai Họ</p>
+        <h2 class="section-title">Chứng Nhân Hạnh Phúc</h2>
+        <div class="gold-line"></div>
+      </div>
+      <div class="families-grid reveal">
+        <div class="family-card">
+          <div class="family-icon">🏠</div>
+          <h3 class="family-side">Nhà Trai</h3>
+          <div class="family-divider"></div>
+          <p class="family-parent">
+            <span class="parent-role">Cha:</span> Nguyễn Văn A
+          </p>
+          <p class="family-parent">
+            <span class="parent-role">Mẹ:</span> Trần Thị B
+          </p>
+          <p class="family-address">📍 Địa chỉ nhà trai</p>
+        </div>
+        <div class="family-heart">❤</div>
+        <div class="family-card">
+          <div class="family-icon">🏠</div>
+          <h3 class="family-side">Nhà Gái</h3>
+          <div class="family-divider"></div>
+          <p class="family-parent">
+            <span class="parent-role">Cha:</span> Mai Văn C
+          </p>
+          <p class="family-parent">
+            <span class="parent-role">Mẹ:</span> Lê Thị D
+          </p>
+          <p class="family-address">📍 Địa chỉ nhà gái</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         6. CÂU CHUYỆN TÌNH YÊU
+    ══════════════════════════════════════ -->
+    <section id="story" class="story-section">
+      <div class="section-header reveal">
+        <p class="section-tag">❤ Câu Chuyện Của Chúng Tôi</p>
+        <h2 class="section-title">Hành Trình Tình Yêu</h2>
+        <div class="gold-line"></div>
+        <p class="section-text">
+          Mỗi câu chuyện tình yêu đều đẹp theo cách riêng của nó,<br/>
+          nhưng câu chuyện của chúng tôi là câu chuyện yêu thích nhất của chúng tôi.
+        </p>
+      </div>
+
+      <div class="timeline-v2">
+
+        <!-- Item 1: LEFT – text trái, ảnh phải -->
+        <div class="tl2-item tl2-item--left reveal">
+          <div class="tl2-content">
+            <p class="tl2-date">Tháng MM, YYYY</p>
+            <h3 class="tl2-title">Lần Đầu Gặp Nhau</h3>
+            <p class="tl2-desc">Lần đầu gặp nhau tại một buổi tiệc của bạn chung. Ánh mắt chạm nhau và mọi thứ bắt đầu từ đó. Một cái nhìn đủ để thay đổi cả cuộc đời.</p>
+          </div>
+          <div class="tl2-dot"></div>
+          <div class="tl2-photo">
+            <img
+              src="images/story/story-1.jpg"
+              alt="Lần đầu gặp nhau"
+              class="tl2-photo-img"
+              loading="lazy"
+            />
+          </div>
+        </div>
+
+        <!-- Item 2: RIGHT – ảnh trái, text phải -->
+        <div class="tl2-item tl2-item--right reveal">
+          <div class="tl2-content">
+            <p class="tl2-date">Tháng MM, YYYY</p>
+            <h3 class="tl2-title">Chính Thức Hẹn Hò</h3>
+            <p class="tl2-desc">Sau những tháng ngày nhắn tin và những buổi cà phê dài bất tận, chúng tôi chính thức bên nhau. Từ đây, hai trái tim cùng chung một nhịp đập.</p>
+          </div>
+          <div class="tl2-dot"></div>
+          <div class="tl2-photo">
+            <img
+              src="images/story/story-2.jpg"
+              alt="Chính thức hẹn hò"
+              class="tl2-photo-img"
+              loading="lazy"
+            />
+          </div>
+        </div>
+
+        <!-- Item 3: LEFT – text trái, ảnh phải -->
+        <div class="tl2-item tl2-item--left reveal">
+          <div class="tl2-content">
+            <p class="tl2-date">Tháng MM, YYYY</p>
+            <h3 class="tl2-title">Chuyến Du Lịch Đầu Tiên</h3>
+            <p class="tl2-desc">Cùng nhau khám phá những vùng đất mới, chia sẻ những khoảnh khắc đáng nhớ. Mỗi chuyến đi là một trang mới trong cuốn sách tình yêu của chúng tôi.</p>
+          </div>
+          <div class="tl2-dot"></div>
+          <div class="tl2-photo">
+            <img
+              src="images/story/story-3.jpg"
+              alt="Chuyến du lịch đầu tiên"
+              class="tl2-photo-img"
+              loading="lazy"
+            />
+          </div>
+        </div>
+
+        <!-- Item 4: RIGHT – ảnh trái, text phải -->
+        <div class="tl2-item tl2-item--right reveal">
+          <div class="tl2-content">
+            <p class="tl2-date">Tháng MM, YYYY</p>
+            <h3 class="tl2-title">Lời Cầu Hôn</h3>
+            <p class="tl2-desc">Trong một buổi chiều lãng mạn, Văn Cường đã quỳ gối cầu hôn Hải Lý. Câu trả lời là một chữ "Có" đầy nước mắt hạnh phúc. Từ đây, chúng tôi cùng hướng về tương lai.</p>
+          </div>
+          <div class="tl2-dot"></div>
+          <div class="tl2-photo">
+            <img
+              src="images/story/story-4.jpg"
+              alt="Lời cầu hôn"
+              class="tl2-photo-img"
+              loading="lazy"
+            />
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ══════════════════════════════════════
+         7. ALBUM ẢNH
+    ══════════════════════════════════════ -->
+    <section id="gallery" class="gallery-section">
+      <div class="section-header reveal">
+        <p class="section-tag">📸 Album Ảnh</p>
+        <h2 class="section-title">Khoảnh Khắc Của Chúng Tôi</h2>
+        <div class="gold-line"></div>
+      </div>
+      <div class="gallery-grid reveal">
+
+        <!-- Cot 1: anh tall chiem 2 hang -->
+        <div class="gallery-item">
+          <img
+            src="images/gallery/gallery-1.jpg"
+            alt="Khoảnh khắc 1"
+            class="gallery-img"
+            loading="lazy"
+          />
+          <div class="gallery-overlay"><span>💕</span></div>
+        </div>
+
+        <!-- Cot 2 + 3: hang 1 -->
+        <div class="gallery-item">
+          <img
+            src="images/gallery/gallery-2.jpg"
+            alt="Khoảnh khắc 2"
+            class="gallery-img"
+            loading="lazy"
+          />
+          <div class="gallery-overlay"><span>💕</span></div>
+        </div>
+
+        <div class="gallery-item">
+          <img
+            src="images/gallery/gallery-3.jpg"
+            alt="Khoảnh khắc 3"
+            class="gallery-img"
+            loading="lazy"
+          />
+          <div class="gallery-overlay"><span>💕</span></div>
+        </div>
+
+        <!-- Cot 2 + 3: hang 2 -->
+        <div class="gallery-item">
+          <img
+            src="images/gallery/gallery-4.jpg"
+            alt="Khoảnh khắc 4"
+            class="gallery-img"
+            loading="lazy"
+          />
+          <div class="gallery-overlay"><span>💕</span></div>
+        </div>
+
+        <div class="gallery-item">
+          <img
+            src="images/gallery/gallery-5.jpg"
+            alt="Khoảnh khắc 5"
+            class="gallery-img"
+            loading="lazy"
+          />
+          <div class="gallery-overlay"><span>💕</span></div>
+        </div>
+
+        <!-- Anh thu 6 -->
+        <div class="gallery-item">
+          <img
+            src="images/gallery/gallery-6.jpg"
+            alt="Khoảnh khắc 6"
+            class="gallery-img"
+            loading="lazy"
+          />
+          <div class="gallery-overlay"><span>💕</span></div>
+        </div>
+
+        <!-- Hang 3: them 3 anh ngang de lap day khoang trong -->
+        <div class="gallery-item">
+          <img
+            src="images/gallery/gallery-3.jpg"
+            alt="Khoảnh khắc 7"
+            class="gallery-img"
+            loading="lazy"
+          />
+          <div class="gallery-overlay"><span>💕</span></div>
+        </div>
+
+        <div class="gallery-item">
+          <img
+            src="images/gallery/gallery-1.jpg"
+            alt="Khoảnh khắc 8"
+            class="gallery-img"
+            loading="lazy"
+          />
+          <div class="gallery-overlay"><span>💕</span></div>
+        </div>
+
+        <div class="gallery-item">
+          <img
+            src="images/gallery/gallery-2.jpg"
+            alt="Khoảnh khắc 9"
+            class="gallery-img"
+            loading="lazy"
+          />
+          <div class="gallery-overlay"><span>💕</span></div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         8. THỜI GIAN SỰ KIỆN
+    ══════════════════════════════════════ -->
+    <section id="events" class="events-section">
+      <div class="section-header reveal">
+        <p class="section-tag">📅 Thời Gian Tổ Chức</p>
+        <h2 class="section-title">Chương Trình</h2>
+        <div class="gold-line"></div>
+      </div>
+
+      <!-- Countdown -->
+      <div class="countdown-wrap reveal">
+        <p class="countdown-label">Đếm ngược đến ngày vui</p>
+        <div class="countdown" id="countdown">
+          <div class="cd-box"><div class="cd-num" id="cd-days">--</div><div class="cd-lbl">Ngày</div></div>
+          <div class="cd-box"><div class="cd-num" id="cd-hours">--</div><div class="cd-lbl">Giờ</div></div>
+          <div class="cd-box"><div class="cd-num" id="cd-mins">--</div><div class="cd-lbl">Phút</div></div>
+          <div class="cd-box"><div class="cd-num" id="cd-secs">--</div><div class="cd-lbl">Giây</div></div>
+        </div>
+      </div>
+
+      <div class="event-cards reveal">
+        <div class="event-card">
+          <div class="event-icon">💍</div>
+          <h3>Lễ Vu Quy</h3>
+          <p>Thứ ..., DD/MM/YYYY<br/>HH:MM sáng<br/>Địa chỉ nhà gái</p>
+        </div>
+        <div class="event-card">
+          <div class="event-icon">🥂</div>
+          <h3>Lễ Thành Hôn &amp; Tiệc Cưới</h3>
+          <p>Thứ ..., DD/MM/YYYY<br/>HH:MM sáng<br/>Tên nhà hàng</p>
+        </div>
+        <div class="event-card">
+          <div class="event-icon">📍</div>
+          <h3>Địa Điểm</h3>
+          <p>Số nhà, Tên đường<br/>Quận / Huyện, Tỉnh / TP<br/>Tên sảnh tiệc</p>
+        </div>
+      </div>
+
+      <!-- Map -->
+      <div class="map-wrap reveal">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d25092.779888967216!2d106.09639244219548!3d20.788696638388238!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjDCsDQ4JzIwLjgiTiAxMDbCsDA0JzQzLjAiRQ!5e0!3m2!1svi!2s!4v1771397475822!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         9. RSVP
+    ══════════════════════════════════════ -->
+    <section id="rsvp" class="rsvp-section">
+      <div class="section-header reveal">
+        <p class="section-tag">💌 Xác Nhận Tham Dự</p>
+        <h2 class="section-title">Bạn Sẽ Đến Chứ?</h2>
+        <div class="gold-line"></div>
+        <p class="section-text">
+          Sự hiện diện của bạn là niềm vui lớn nhất với chúng tôi.<br/>
+          Vui lòng xác nhận trước ngày <strong>DD/MM/YYYY</strong>.
+        </p>
+      </div>
+      <form class="rsvp-form reveal" id="rsvp-form">
+        <div class="rsvp-row">
+          <input type="text"   id="rsvp-name"   placeholder="Họ và tên của bạn ✦" required />
+          <input type="tel"    id="rsvp-phone"  placeholder="Số điện thoại ✦" />
+        </div>
+        <select id="rsvp-attend">
+          <option value="">-- Bạn có tham dự không? --</option>
+          <option value="yes">✅ Tôi sẽ tham dự</option>
+          <option value="no">❌ Rất tiếc, tôi không thể đến</option>
+        </select>
+        <input type="number" id="rsvp-guests" placeholder="Số người đi cùng (nếu có)" min="0" max="10" />
+        <textarea id="rsvp-msg" placeholder="Lời chúc gửi đến cô dâu & chú rể... 💕"></textarea>
+        <button type="submit" class="btn-rsvp">Gửi Xác Nhận 💌</button>
+      </form>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         10. MÃ QR
+    ══════════════════════════════════════ -->
+    <section id="qr" class="qr-section">
+      <div class="section-header reveal">
+        <p class="section-tag">🎁 Mừng Cưới</p>
+        <h2 class="section-title">Mã QR Chuyển Khoản</h2>
+        <div class="gold-line"></div>
+        <p class="section-text">
+          Nếu bạn muốn gửi lời chúc mừng qua phong bì điện tử,<br/>
+          xin quét mã QR bên dưới.
+        </p>
+      </div>
+      <div class="qr-cards reveal">
+        <!-- QR Chú Rể -->
+        <div class="qr-card">
+          <p class="qr-role">Chú Rể</p>
+          <p class="qr-name">Nguyễn Văn Cường</p>
+          <div class="qr-box">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" width="160" height="160">
+              <rect width="200" height="200" fill="white" rx="8"/>
+              <!-- QR pattern placeholder -->
+              <rect x="20"  y="20"  width="60" height="60" fill="none" stroke="#333" stroke-width="6"/>
+              <rect x="30"  y="30"  width="40" height="40" fill="#333"/>
+              <rect x="120" y="20"  width="60" height="60" fill="none" stroke="#333" stroke-width="6"/>
+              <rect x="130" y="30"  width="40" height="40" fill="#333"/>
+              <rect x="20"  y="120" width="60" height="60" fill="none" stroke="#333" stroke-width="6"/>
+              <rect x="30"  y="130" width="40" height="40" fill="#333"/>
+              <rect x="90"  y="20"  width="10" height="10" fill="#333"/>
+              <rect x="90"  y="40"  width="10" height="10" fill="#333"/>
+              <rect x="90"  y="60"  width="10" height="10" fill="#333"/>
+              <rect x="110" y="90"  width="10" height="10" fill="#333"/>
+              <rect x="130" y="90"  width="10" height="10" fill="#333"/>
+              <rect x="150" y="90"  width="10" height="10" fill="#333"/>
+              <rect x="170" y="90"  width="10" height="10" fill="#333"/>
+              <rect x="90"  y="110" width="10" height="10" fill="#333"/>
+              <rect x="110" y="110" width="10" height="10" fill="#333"/>
+              <rect x="90"  y="130" width="10" height="10" fill="#333"/>
+              <rect x="110" y="130" width="10" height="10" fill="#333"/>
+              <rect x="130" y="130" width="10" height="10" fill="#333"/>
+              <rect x="90"  y="150" width="10" height="10" fill="#333"/>
+              <rect x="130" y="150" width="10" height="10" fill="#333"/>
+              <rect x="150" y="150" width="10" height="10" fill="#333"/>
+              <rect x="90"  y="170" width="10" height="10" fill="#333"/>
+              <rect x="110" y="170" width="10" height="10" fill="#333"/>
+              <rect x="150" y="170" width="10" height="10" fill="#333"/>
+              <rect x="170" y="170" width="10" height="10" fill="#333"/>
+              <text x="100" y="195" text-anchor="middle" fill="#999" font-size="8" font-family="sans-serif">[ Thay bằng QR thực ]</text>
+            </svg>
+          </div>
+          <p class="qr-bank">Ngân hàng: ...</p>
+          <p class="qr-account">STK: ...</p>
+        </div>
+
+        <!-- QR Cô Dâu -->
+        <div class="qr-card">
+          <p class="qr-role">Cô Dâu</p>
+          <p class="qr-name">Mai Hải Lý</p>
+          <div class="qr-box">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" width="160" height="160">
+              <rect width="200" height="200" fill="white" rx="8"/>
+              <rect x="20"  y="20"  width="60" height="60" fill="none" stroke="#333" stroke-width="6"/>
+              <rect x="30"  y="30"  width="40" height="40" fill="#333"/>
+              <rect x="120" y="20"  width="60" height="60" fill="none" stroke="#333" stroke-width="6"/>
+              <rect x="130" y="30"  width="40" height="40" fill="#333"/>
+              <rect x="20"  y="120" width="60" height="60" fill="none" stroke="#333" stroke-width="6"/>
+              <rect x="30"  y="130" width="40" height="40" fill="#333"/>
+              <rect x="90"  y="20"  width="10" height="10" fill="#333"/>
+              <rect x="90"  y="60"  width="10" height="10" fill="#333"/>
+              <rect x="110" y="90"  width="10" height="10" fill="#333"/>
+              <rect x="150" y="90"  width="10" height="10" fill="#333"/>
+              <rect x="90"  y="110" width="10" height="10" fill="#333"/>
+              <rect x="130" y="110" width="10" height="10" fill="#333"/>
+              <rect x="170" y="110" width="10" height="10" fill="#333"/>
+              <rect x="110" y="130" width="10" height="10" fill="#333"/>
+              <rect x="150" y="130" width="10" height="10" fill="#333"/>
+              <rect x="90"  y="150" width="10" height="10" fill="#333"/>
+              <rect x="110" y="150" width="10" height="10" fill="#333"/>
+              <rect x="170" y="150" width="10" height="10" fill="#333"/>
+              <rect x="130" y="170" width="10" height="10" fill="#333"/>
+              <rect x="150" y="170" width="10" height="10" fill="#333"/>
+              <text x="100" y="195" text-anchor="middle" fill="#999" font-size="8" font-family="sans-serif">[ Thay bằng QR thực ]</text>
+            </svg>
+          </div>
+          <p class="qr-bank">Ngân hàng: ...</p>
+          <p class="qr-account">STK: ...</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         FOOTER
+    ══════════════════════════════════════ -->
+    <footer class="site-footer">
+      <div class="footer-songhy">囍</div>
+      <span class="footer-names">Văn Cường &amp; Hải Lý</span>
+      <p class="footer-date">DD · MM · YYYY</p>
+      <p class="footer-wish">Trân trọng kính mời · Hạnh phúc mãi mãi 💕</p>
+      <p class="footer-credit">Made with ❤ for our special day</p>
+    </footer>
+
+  </div><!-- /#page -->
+
+  <!-- ══════════════════════════════════════
+       RSVP TOAST NOTIFICATION MODAL
+  ══════════════════════════════════════ -->
+  <div id="rsvp-toast-overlay" class="rsvp-toast-overlay" role="dialog" aria-modal="true" aria-labelledby="rsvp-toast-title">
+    <div id="rsvp-toast-box" class="rsvp-toast">
+      <span class="rsvp-toast-icon" id="rsvp-toast-icon">💌</span>
+      <div class="rsvp-toast-title" id="rsvp-toast-title-text">Cảm ơn bạn!</div>
+      <div class="rsvp-toast-name" id="rsvp-toast-name"></div>
+      <div class="rsvp-toast-divider"></div>
+      <div class="rsvp-toast-msg" id="rsvp-toast-msg"></div>
+      <div class="rsvp-toast-hearts" id="rsvp-toast-hearts">💕 ❤️ 💍 ❤️ 💕</div>
+      <button class="rsvp-toast-close" id="rsvp-toast-close">Đóng lại</button>
+    </div>
+  </div>
+
+  <!-- Hearts canvas -->
+  <canvas id="hearts-canvas" aria-hidden="true"></canvas>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
